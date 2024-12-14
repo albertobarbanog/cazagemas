@@ -1,0 +1,10 @@
+export { default as AboutMe } from './AboutMe';
+export { default as CartPage } from './CartPage';
+export { default as ContactPage } from './ContactPage';
+export { default as CreatePage } from './CreatePage';
+export { default as EditProductPage } from './EditProductPage';
+export { default as FailurePage } from './FailurePage';
+export { default as HomePage } from './HomePage';
+export { default as LocationPage } from './LocationPage';
+export { default as LoginPage } from './LoginPage';
+export { default as SuccessPage } from './SuccessPage';

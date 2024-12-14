@@ -1,76 +1,55 @@
-import mongoose from 'mongoose';
-import Product from '../models/product.model.js'; // Sin la extensión .js no funciona
+import Product from '../models/product.model.js';
 
+// Function to create a new product
+export const createProduct = async (req, res) => {
+  try {
+    const product = new Product(req.body);
+    await product.save();
+    res.status(201).json({ success: true, data: product });
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
+  }
+};
+
+// Function to get all products
 export const getProducts = async (req, res) => {
   try {
-    const products = await Product.find({});
+    const products = await Product.find();
     res.status(200).json({ success: true, data: products });
   } catch (error) {
-    console.log('Error in Fetch Products', error.message);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
-export const createProduct = async (req, res) => {
-  const product = req.body; // Usuario envia esta data
-
-  if (!product.name || !product.price || !product.image) {
-    return res.status(400).json({ success: false, message: 'Invalid data' });
-  }
-
-  const newProduct = new Product(product);
-
-  try {
-    await newProduct.save();
-    res.status(201).json({
-      success: true,
-      message: 'Product created successfully',
-      data: newProduct,
-    });
-  } catch (error) {
-    console.error('Error in Create Product', error.message);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
-  }
-};
-
+// Function to update a product
 export const updateProduct = async (req, res) => {
-  const { id } = req.params;
-
-  const product = req.body;
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res
-      .status(404)
-      .json({ success: false, message: 'Invalid product id' });
-  }
-
   try {
-    const updatedProduct = await Product.findByIdAndUpdate(id, product, {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
+      runValidators: true,
     });
-    res.status(200).json({ success: true, data: updatedProduct });
+    if (!product) {
+      return res
+        .status(404)
+        .json({ success: false, message: 'Product not found' });
+    }
+    res.status(200).json({ success: true, data: product });
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Server Error' });
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
+// Function to delete a product
 export const deleteProduct = async (req, res) => {
-  const { id } = req.params;
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res
-      .status(404)
-      .json({ success: false, message: 'Invalid product id' });
-  }
-
-  console.log('id');
   try {
-    await Product.findByIdAndDelete(id);
-    res
-      .status(200)
-      .json({ success: true, message: 'Product deleted successfully' });
+    const product = await Product.findByIdAndDelete(req.params.id);
+    if (!product) {
+      return res
+        .status(404)
+        .json({ success: false, message: 'Product not found' });
+    }
+    res.status(200).json({ success: true, data: {} });
   } catch (error) {
-    console.error('Error in Delete Product', error.message);
-    res.status(500).json({ success: false, message: 'Server Error' });
+    res.status(400).json({ success: false, message: error.message });
   }
 };
