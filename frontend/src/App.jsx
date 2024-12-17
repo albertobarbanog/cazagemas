@@ -12,6 +12,7 @@ import {
   LocationPage,
   LoginPage,
   SuccessPage,
+  PendingPage, // Importar el nuevo componente
 } from './pages';
 
 function App() {
@@ -43,13 +44,18 @@ function App() {
           element={<FailurePage />}
         />
         <Route
+          path='/pending'
+          element={<PendingPage />}
+        />{' '}
+        {/* Nueva ruta */}
+        <Route
           path='/login'
           element={<LoginPage />}
         />
         <Route
           path='/edit/:productId'
           element={<EditProductPage />}
-        />{' '}
+        />
         <Route
           path='/about'
           element={<AboutMe />}

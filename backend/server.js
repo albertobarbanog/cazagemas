@@ -6,6 +6,7 @@ import authRoutes from './routes/auth.route.js';
 import contactRoutes from './routes/contact.route.js';
 import productRoutes from './routes/product.route.js';
 import mercadopagoRoutes from './routes/mercadopago.route.js';
+import path from 'path';
 
 dotenv.config(); // Carga las variables de entorno
 
@@ -19,6 +20,9 @@ app.use(
   })
 );
 
+// Middleware para servir archivos estáticos
+const __dirname = path.resolve();
+
 // Middleware para parsear JSON
 app.use(express.json());
 
@@ -27,6 +31,14 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/mercadopago', mercadopagoRoutes);
 app.use('/api/contact', contactRoutes);
+
+// Middleware para servir archivos estáticos
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/dist')));
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
+  );
+}
 
 // Conecta a la base de datos y arranca el servidor
 connectDB();

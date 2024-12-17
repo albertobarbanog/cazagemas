@@ -8,3 +8,4 @@ export { default as HomePage } from './HomePage';
 export { default as LocationPage } from './LocationPage';
 export { default as LoginPage } from './LoginPage';
 export { default as SuccessPage } from './SuccessPage';
+export { default as PendingPage } from './PendingPage';
