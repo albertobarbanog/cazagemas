@@ -3,11 +3,7 @@
 1. Clona el repositorio:
 
    ```sh
-<<<<<<< HEAD
-   git clone https://github.com/albertobarbanog/cazagemas.git
-=======
    git clone https://github.com/tu-usuario/cazagemas.git
->>>>>>> fb1a91d7956f79fad523940354973d2ec2bfb2ab
    cd cazagemas
    ```
 
