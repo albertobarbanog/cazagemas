@@ -24,6 +24,8 @@ const AboutMe = () => {
           alt='Tatuadora'
           mx='auto'
           mb={4}
+          transition='transform 0.3s'
+          _hover={{ transform: 'scale(1.1)' }}
         />
         <Text
           fontSize='lg'

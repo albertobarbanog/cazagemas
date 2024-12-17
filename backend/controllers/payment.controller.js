@@ -21,8 +21,8 @@ export const createOrder = async (req, res) => {
 
     const payer = {
       email: 'comprador.nuevo@mail.com',
-      first_name: 'John',
-      last_name: 'Doe',
+      first_name: 'Alberto',
+      last_name: 'Barbano',
       phone: {
         area_code: '1',
         number: '1234567',
@@ -31,11 +31,11 @@ export const createOrder = async (req, res) => {
         street_name: 'Calle 123',
         street_number: '123',
         zip_code: '123456',
-        city: 'Bogotá',
+        city: 'Santiago',
       },
       identification: {
         type: 'DNI',
-        number: '12345678',
+        number: '123456789',
       },
     };
 

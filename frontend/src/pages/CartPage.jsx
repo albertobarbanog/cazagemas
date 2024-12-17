@@ -7,6 +7,7 @@ import {
   VStack,
   HStack,
   Divider,
+  Image,
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { useProductStore } from '../store/product';
@@ -54,6 +55,11 @@ const CartPage = () => {
                 justifyContent='space-between'
                 alignItems='center'
               >
+                <Image
+                  boxSize='50px'
+                  src={product.image}
+                  alt={product.name}
+                />
                 <Text>{product.name}</Text>
                 <HStack>
                   <Button
