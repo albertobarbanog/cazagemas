@@ -16,7 +16,7 @@ const AboutMe = () => {
       py={12}
     >
       <Box textAlign='center'>
-        <Heading mb={4}>Sobre Mi</Heading>
+        <Heading mb={4}>Sobre Mi 🌷</Heading>
         <Image
           borderRadius='full'
           boxSize='300px'

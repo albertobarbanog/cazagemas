@@ -38,7 +38,7 @@ const ContactPage = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Hubo un error al enviar tu mensaje');
       }
 
       toast({
