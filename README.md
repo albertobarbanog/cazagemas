@@ -1,4 +1,31 @@
-# Instalación
+# Aplicación Desplegada en Render.com
+
+Adjunto el enlace de la app desplegada en [Render.com](https://cazagemas.onrender.com/). La forma mas rapida de probar la aplicación.
+
+## Credenciales de Prueba
+
+Dejo una cuenta para poder acceder y utilizar todas las funcionalidades de la aplicación:
+
+- **Usuario:** `admin@example.com`
+- **Contraseña:** `123456`
+
+### Propósito de la Aplicación
+
+Esta app fue creada para el trabajo de mi pareja. La idea principal era desarrollar una herramienta **extremadamente fácil de usar** y que pudiera **administrarse directamente desde el navegador**.
+
+## Características Clave
+
+- La interfaz es la misma tanto para el **usuario** como para el **administrador**.
+- Al iniciar sesión, el administrador obtiene acceso al **control completo** de los productos, pudiendo:
+  - **Editar productos.**
+  - **Borrar productos.**
+  - **Agregar nuevos productos.**
+
+### Integración con MercadoPago
+
+MercadoPago está asociado, pero dejé la API en modo **sandbox** para realizar pruebas seguras. La integración está lista para probar pagos y validar el flujo completo.
+
+## Instalación
 
 1. Clona el repositorio:
 
