@@ -3,7 +3,7 @@
 1. Clona el repositorio:
 
    ```sh
-   git clone https://github.com/tu-usuario/cazagemas.git
+   git clone https://github.com/albertobarbanog/cazagemas.git
    cd cazagemas
    ```
 
@@ -15,7 +15,7 @@
    ```
 
 3. Configura las variables de entorno:
-   - Crea los archivos [.env] en la carpeta raiz y uno en la carpeta frontend y usa los [.env.template].
+   - Crea los archivos [.env] en la carpeta base y uno en la carpeta frontend y usa los [.env.template].
    - Completa las variables de entorno con tus propios valores.
 
 ## Scripts
