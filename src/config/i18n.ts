@@ -30,7 +30,7 @@ const es = {
   },
   tagline: "Tatuadora en Santiago · Anime, línea fina y diseños personalizados",
   skipLink: "Saltar al contenido",
-  whatsappMessage: "¡Hola Javiera! Vi tu página y me gustaría cotizar un tatuaje 🖤",
+  whatsappMessage: "¡Hola Javiera! Quiero agendar un tatuaje.\n\nIdea: \nZona: \nTamaño aprox.: ",
   mapsLang: "es",
   nav: {
     ariaLabel: "Principal",
@@ -113,6 +113,16 @@ const es = {
     description:
       "Escríbeme por WhatsApp o Instagram con tu idea, la zona del cuerpo y el tamaño aproximado, y la conversamos.",
     cta: "Agenda tu tatuaje",
+    expectations: "Respondo normalmente dentro de 24 horas. Para agendar tu fecha se pide un abono.",
+    whatsappLabel: "WhatsApp",
+    whatsappHint: "Respuesta más rápida",
+    instagramLabel: "Instagram",
+    instagramHint: "Mándame un DM",
+    steps: [
+      { title: "Tu idea", hint: "referencias, estilo" },
+      { title: "Zona del cuerpo", hint: "brazo, espalda…" },
+      { title: "Tamaño aprox.", hint: "en cm" },
+    ],
   },
   footer: {
     rights: (year: number, name: string, artist: string) =>
@@ -165,7 +175,7 @@ const en: Copy = {
   },
   tagline: "Tattoo artist in Santiago · Anime, fine line and custom designs",
   skipLink: "Skip to content",
-  whatsappMessage: "Hi Javiera! I saw your website and I'd like to get a quote for a tattoo 🖤",
+  whatsappMessage: "Hi Javiera! I'd like to book a tattoo.\n\nIdea: \nArea: \nApprox. size: ",
   mapsLang: "en",
   nav: {
     ariaLabel: "Main",
@@ -247,6 +257,16 @@ const en: Copy = {
     description:
       "Message me on WhatsApp or Instagram with your idea, the area of the body and the approximate size, and we'll talk it through.",
     cta: "Book your tattoo",
+    expectations: "I usually reply within 24 hours. A deposit is required to book your date.",
+    whatsappLabel: "WhatsApp",
+    whatsappHint: "Fastest reply",
+    instagramLabel: "Instagram",
+    instagramHint: "Send me a DM",
+    steps: [
+      { title: "Your idea", hint: "references, style" },
+      { title: "Body area", hint: "arm, back…" },
+      { title: "Approx. size", hint: "in cm" },
+    ],
   },
   footer: {
     rights: (year: number, name: string, artist: string) => `© ${year} ${name} · ${artist}. All rights reserved.`,

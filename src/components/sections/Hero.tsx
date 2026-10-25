@@ -38,7 +38,7 @@ export function Hero({ locale }: { locale: Locale }) {
           </FadeUp>
 
           <FadeUp delay={0.16}>
-            <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-lavanda-50/85 lg:mx-0">
+            <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-lavanda-50/95 lg:mx-0">
               {t.tagline}
             </p>
           </FadeUp>
@@ -52,7 +52,7 @@ export function Hero({ locale }: { locale: Locale }) {
                 {t.hero.secondaryCta}
               </Button>
             </div>
-            <p className="mt-8 text-sm text-lavanda-50/70">
+            <p className="mt-8 text-sm text-lavanda-50/95">
               {t.hero.workAt(studio.name, studio.address.commune)}
             </p>
           </FadeUp>

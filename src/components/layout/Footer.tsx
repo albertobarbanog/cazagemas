@@ -27,7 +27,7 @@ export function Footer({ locale }: { locale: Locale }) {
             <ul className="space-y-3 text-sm">
               {t.nav.links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="py-1 text-lavanda-50/80 transition-colors hover:text-white">
+                  <a href={link.href} className="py-1 text-lavanda-50/95 transition-colors hover:text-white">
                     {link.label}
                   </a>
                 </li>
@@ -55,7 +55,7 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center gap-3 border-t border-lavanda-300/25 pt-8 text-center text-xs text-lavanda-50/70">
+        <div className="mt-14 flex flex-col items-center gap-3 border-t border-lavanda-300/25 pt-8 text-center text-xs text-lavanda-50/95">
           <Sparkle className="size-3 text-lavanda-300" />
           <p>
             {t.footer.rights(year, siteConfig.name, siteConfig.artist)}
