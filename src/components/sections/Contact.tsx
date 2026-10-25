@@ -1,3 +1,4 @@
+import { SiInstagram, SiWhatsapp } from "react-icons/si";
 import { contact, getWhatsappUrl, siteConfig } from "@/config/site";
 import { getCopy, type Locale } from "@/config/i18n";
 import { Button } from "@/components/ui/Button";
@@ -48,21 +49,31 @@ export function Contact({ locale }: { locale: Locale }) {
               href={getWhatsappUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-1 rounded-2xl border border-lavanda-300/40 p-5 text-left transition-colors hover:bg-lavanda-50/10"
+              className="group flex items-center gap-4 rounded-2xl border border-lavanda-300/40 p-5 text-left transition-colors hover:bg-lavanda-50/10"
             >
-              <span className="font-serif text-2xl">{t.whatsappLabel}</span>
-              <span className="text-sm text-lavanda-50/95">{contact.phoneDisplay}</span>
-              <span className="mt-2 text-sm text-lavanda-300">{t.whatsappHint} →</span>
+              <span className="grid size-14 shrink-0 place-items-center rounded-full border border-lavanda-300/50 bg-lavanda-50/10 text-lavanda-50 transition-colors duration-300 group-hover:border-lavanda-50 group-hover:bg-lavanda-50 group-hover:text-violeta-900">
+                <SiWhatsapp className="size-6" aria-hidden="true" />
+              </span>
+              <span className="flex flex-col gap-1">
+                <span className="font-serif text-2xl">{t.whatsappLabel}</span>
+                <span className="text-sm text-lavanda-50/95">{contact.phoneDisplay}</span>
+                <span className="mt-2 text-sm text-lavanda-300">{t.whatsappHint} →</span>
+              </span>
             </a>
             <a
               href={contact.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-1 rounded-2xl border border-lavanda-300/40 p-5 text-left transition-colors hover:bg-lavanda-50/10"
+              className="group flex items-center gap-4 rounded-2xl border border-lavanda-300/40 p-5 text-left transition-colors hover:bg-lavanda-50/10"
             >
-              <span className="font-serif text-2xl">{t.instagramLabel}</span>
-              <span className="text-sm text-lavanda-50/95">{siteConfig.handle}</span>
-              <span className="mt-2 text-sm text-lavanda-300">{t.instagramHint} →</span>
+              <span className="grid size-14 shrink-0 place-items-center rounded-full border border-lavanda-300/50 bg-lavanda-50/10 text-lavanda-50 transition-colors duration-300 group-hover:border-lavanda-50 group-hover:bg-lavanda-50 group-hover:text-violeta-900">
+                <SiInstagram className="size-6" aria-hidden="true" />
+              </span>
+              <span className="flex flex-col gap-1">
+                <span className="font-serif text-2xl">{t.instagramLabel}</span>
+                <span className="text-sm text-lavanda-50/95">{siteConfig.handle}</span>
+                <span className="mt-2 text-sm text-lavanda-300">{t.instagramHint} →</span>
+              </span>
             </a>
           </div>
           <Button href={getWhatsappUrl(locale)} variant="light" className="mt-10 px-10">

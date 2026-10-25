@@ -44,6 +44,17 @@ body {
   outline-color: var(--color-lavanda-300);
 }
 
+/* Cursor de Cinnamoroll (conjunto de CutePusheenLove, dominio público). El cursor de enlace lleva una curita. */
+html {
+  cursor: url("../../public/cursors/cinnamoroll.png") 0 8, auto;
+}
+a,
+button,
+[role="button"],
+summary {
+  cursor: url("../../public/cursors/cinnamoroll-link.png") 0 8, pointer;
+}
+
 /* Sombra suave bajo el texto sobre fondos oscuros: separa las letras del fondo sin cambiar el diseño. */
 .on-dark :is(h1, h2, h3, p, li, address) {
   text-shadow: 0 1px 3px rgb(20 5 35 / 0.5), 0 2px 16px rgb(20 5 35 / 0.65);
